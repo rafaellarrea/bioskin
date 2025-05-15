@@ -10,8 +10,8 @@ const ResultsPage: React.FC = () => {
       id: 1,
       treatment: 'Tratamiento Antimanchas',
       description: 'Tratamiento específico para eliminar manchas y mejorar el tono uniforme de la piel.',
-      beforeImage: '"C:\Users\Gamer\Documents\BIO SKIN\BIOTECH\WEBSITE\bioskin-ready-for-vercel\public\images\manchas\despigmentante_antes.png"',
-      afterImage: '"C:\Users\Gamer\Documents\BIO SKIN\BIOTECH\WEBSITE\bioskin-ready-for-vercel\public\images\manchas\despigmentante_despues.png"',
+      beforeImage: 'C:\Users\Gamer\Documents\BIO SKIN\BIOTECH\WEBSITE\bioskin-ready-for-vercel\public\images\manchas\despigmentante_antes.png',
+      afterImage: 'C:\Users\Gamer\Documents\BIO SKIN\BIOTECH\WEBSITE\bioskin-ready-for-vercel\public\images\manchas\despigmentante_despues.png',
       sessions: '3 sesiones'
     },
     {
