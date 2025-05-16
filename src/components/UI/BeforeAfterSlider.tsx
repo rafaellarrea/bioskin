@@ -76,17 +76,17 @@ const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
   return (
   <div 
     ref={containerRef}
-    className="overflow-hidden rounded-lg shadow-md cursor-move"
-    onMouseDown={handleMouseDown}
-    onTouchStart={handleMouseDown}
-    onTouchMove={(e) => e.preventDefault()}
+  className="relative h-[400px] overflow-hidden rounded-lg shadow-md cursor-move"
+  onMouseDown={handleMouseDown}
+  onTouchStart={handleMouseDown}
+  onTouchMove={(e) => e.preventDefault()}
   >
     {/* After image (base layer) */}
     <div style={{ position: 'relative' }}>
       <img 
         src={afterImage} 
         alt="Después del tratamiento" 
-        className="w-full object-contain"
+        className="absolute top-0 left-0 w-full h-full object-contain"
       />
 
       {/* Before image (slider layer) */}
@@ -100,7 +100,7 @@ const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
         <img 
           src={beforeImage} 
           alt="Antes del tratamiento" 
-          className="w-full object-contain"
+          className="absolute top-0 left-0 w-full h-full object-contain"
         />
       </div>
 
