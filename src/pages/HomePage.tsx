@@ -197,8 +197,8 @@ const ResultsSection: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div>
           <BeforeAfterSlider 
-            beforeImage="https://images.pexels.com/photos/3764151/pexels-photo-3764151.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" 
-            afterImage="https://images.pexels.com/photos/3764168/pexels-photo-3764168.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" 
+            beforeImage="/images/manchas/despigmentante_antes.png" 
+            afterImage="/images/manchas/despigmentante_despues.png" 
           />
           <p className="text-center mt-4 font-medium text-gray-800">Tratamiento Antimanchas</p>
         </div>
