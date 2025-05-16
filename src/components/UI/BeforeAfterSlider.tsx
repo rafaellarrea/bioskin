@@ -88,7 +88,7 @@ const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
       <img 
         src={afterImage} 
         alt="Después del tratamiento" 
-        className="absolute top-0 left-0 w-full h-full object-cover object-top"
+        className="absolute top-0 left-0 w-full h-full object-contain"
       />
       
       {/* Before image (revealed by slider) */}
@@ -99,7 +99,7 @@ const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
         <img 
           src={beforeImage} 
           alt="Antes del tratamiento" 
-          className="absolute top-0 left-0 w-full h-full object-cover object-top"
+          className="absolute top-0 left-0 w-full h-full object-contain"
         />
       </div>
       
