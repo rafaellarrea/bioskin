@@ -73,54 +73,49 @@ const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
     };
   }, [isDragging]);
 
-  return (
+return (
   <div 
     ref={containerRef}
-  className="relative h-[400px] overflow-hidden rounded-lg shadow-md cursor-move"
-  onMouseDown={handleMouseDown}
-  onTouchStart={handleMouseDown}
-  onTouchMove={(e) => e.preventDefault()}
+    className="relative h-[400px] overflow-hidden rounded-lg shadow-md cursor-move"
+    onMouseDown={handleMouseDown}
+    onTouchStart={handleMouseDown}
+    onTouchMove={(e) => e.preventDefault()}
   >
     {/* After image (base layer) */}
-    <div style={{ position: 'relative' }}>
+    <img 
+      src={afterImage} 
+      alt="Después del tratamiento" 
+      className="absolute top-0 left-0 w-full h-full object-contain"
+    />
+
+    {/* Before image (slider layer) */}
+    <div 
+      className="absolute top-0 left-0 h-full overflow-hidden"
+      style={{ width: `${sliderPosition}%` }}
+    >
       <img 
-        src={afterImage} 
-        alt="Después del tratamiento" 
+        src={beforeImage} 
+        alt="Antes del tratamiento" 
         className="absolute top-0 left-0 w-full h-full object-contain"
       />
+    </div>
 
-      {/* Before image (slider layer) */}
-      <div 
-        className="absolute top-0 left-0 overflow-hidden"
-        style={{
-          width: `${sliderPosition}%`,
-          height: '100%',
-        }}
-      >
-        <img 
-          src={beforeImage} 
-          alt="Antes del tratamiento" 
-          className="absolute top-0 left-0 w-full h-full object-contain"
-        />
+    {/* Slider control */}
+    <div 
+      className="absolute top-0 bottom-0 w-1 bg-white cursor-col-resize"
+      style={{ left: `${sliderPosition}%`, transform: 'translateX(-50%)' }}
+    >
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center border-2 border-[#deb887]">
+        <div className="w-4 h-4 bg-[#deb887] rounded-full"></div>
       </div>
+    </div>
 
-      {/* Slider control */}
-      <div 
-        className="absolute top-0 bottom-0 w-1 bg-white cursor-col-resize"
-        style={{ left: `${sliderPosition}%`, transform: 'translateX(-50%)' }}
-      >
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center border-2 border-[#deb887]">
-          <div className="w-4 h-4 bg-[#deb887] rounded-full"></div>
-        </div>
-      </div>
-
-      {/* Labels */}
-      <div className="absolute bottom-4 left-4 bg-black/50 text-white px-3 py-1 text-sm rounded-full">
-        {beforeLabel}
-      </div>
-      <div className="absolute bottom-4 right-4 bg-black/50 text-white px-3 py-1 text-sm rounded-full">
-        {afterLabel}
-      </div>
+    {/* Labels */}
+    <div className="absolute bottom-4 left-4 bg-black/50 text-white px-3 py-1 text-sm rounded-full">
+      {beforeLabel}
+    </div>
+    <div className="absolute bottom-4 right-4 bg-black/50 text-white px-3 py-1 text-sm rounded-full">
+      {afterLabel}
     </div>
   </div>
 );
