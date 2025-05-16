@@ -74,35 +74,36 @@ const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
   }, [isDragging]);
 
   return (
-    <div 
-      ref={containerRef}
-      className="relative h-[480px] overflow-hidden rounded-lg shadow-md cursor-move"
-      onMouseDown={handleMouseDown}
-      onTouchStart={handleMouseDown}
-      onTouchMove={(e) => {
-        e.preventDefault();
-        // Touch move is handled by the useEffect
-      }}
-    >
-      {/* After image (base layer) */}
+  <div 
+    ref={containerRef}
+    className="overflow-hidden rounded-lg shadow-md cursor-move"
+    onMouseDown={handleMouseDown}
+    onTouchStart={handleMouseDown}
+    onTouchMove={(e) => e.preventDefault()}
+  >
+    {/* After image (base layer) */}
+    <div style={{ position: 'relative' }}>
       <img 
         src={afterImage} 
         alt="Después del tratamiento" 
-        className="absolute top-0 left-0 w-full h-full object-contain"
+        className="w-full object-contain"
       />
-      
-      {/* Before image (revealed by slider) */}
+
+      {/* Before image (slider layer) */}
       <div 
-        className="absolute top-0 left-0 h-full overflow-hidden"
-        style={{ width: `${sliderPosition}%` }}
+        className="absolute top-0 left-0 overflow-hidden"
+        style={{
+          width: `${sliderPosition}%`,
+          height: '100%',
+        }}
       >
         <img 
           src={beforeImage} 
           alt="Antes del tratamiento" 
-          className="absolute top-0 left-0 w-full h-full object-contain"
+          className="w-full object-contain"
         />
       </div>
-      
+
       {/* Slider control */}
       <div 
         className="absolute top-0 bottom-0 w-1 bg-white cursor-col-resize"
@@ -112,7 +113,7 @@ const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
           <div className="w-4 h-4 bg-[#deb887] rounded-full"></div>
         </div>
       </div>
-      
+
       {/* Labels */}
       <div className="absolute bottom-4 left-4 bg-black/50 text-white px-3 py-1 text-sm rounded-full">
         {beforeLabel}
@@ -121,7 +122,8 @@ const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
         {afterLabel}
       </div>
     </div>
-  );
+  </div>
+);
 };
 
 export default BeforeAfterSlider;
