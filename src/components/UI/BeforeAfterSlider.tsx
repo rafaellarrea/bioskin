@@ -76,7 +76,7 @@ const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
   return (
     <div 
       ref={containerRef}
-      className="relative h-80 overflow-hidden rounded-lg shadow-md cursor-move"
+      className="relative h-[480px] overflow-hidden rounded-lg shadow-md cursor-move"
       onMouseDown={handleMouseDown}
       onTouchStart={handleMouseDown}
       onTouchMove={(e) => {
