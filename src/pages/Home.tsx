@@ -24,8 +24,8 @@ const Home = () => {
       {/* Hero background */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.pexels.com/photos/3985363/pexels-photo-3985363.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          alt="Bio Skin tratamientos faciales"
+          src="/images/logo/logo.png"
+          alt="BIOSKIN BY DRA DANIELA CREAMER"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
