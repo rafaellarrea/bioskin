@@ -1,0 +1,100 @@
+import React from 'react';
+import ServiceCard from '../components/ServiceCard';
+
+const Services = () => {
+  const services = [
+    {
+      title: "Limpieza Facial Profunda",
+      description: "Elimina impurezas, puntos negros y células muertas. Incluye extracción, hidratación y mascarilla personalizada.",
+      price: 45,
+      image: "https://images.pexels.com/photos/3997981/pexels-photo-3997981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      title: "Tratamiento Antiaging",
+      description: "Combate los signos del envejecimiento con radiofrecuencia y activos regeneradores para reafirmar la piel.",
+      price: 65,
+      image: "https://images.pexels.com/photos/3997993/pexels-photo-3997993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      title: "Tratamiento Antimanchas",
+      description: "Reduce hiperpigmentación con IPL y láser Nd:YAG, unificando el tono y luminosidad de la piel.",
+      price: 70,
+      image: "https://images.pexels.com/photos/3192384/pexels-photo-3192384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      title: "Remoción de Tatuajes",
+      description: "Eliminación progresiva de tatuajes mediante láser Nd:YAG de última generación. Sesiones personalizadas.",
+      price: 80,
+      image: "https://images.pexels.com/photos/936094/pexels-photo-936094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      title: "Hidratación Profunda",
+      description: "Restaura la barrera cutánea con ácido hialurónico, péptidos y vitaminas para una piel radiante e hidratada.",
+      price: 50,
+      image: "https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      title: "Hollywood Peel",
+      description: "Peeling de carbón con láser para rejuvenecer, eliminar impurezas y dar luminosidad inmediata a la piel.",
+      price: 75,
+      image: "https://images.pexels.com/photos/3764013/pexels-photo-3764013.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+  ];
+
+  return (
+    <section id="services" className="py-24 bg-gray-50">
+      <div className="container-custom">
+        <div className="text-center mb-12 animate-fade-in" data-aos="fade-up">
+          <h2 className="section-title">Nuestros Servicios</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Ofrecemos tratamientos personalizados con tecnología de vanguardia para resolver tus necesidades específicas.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <ServiceCard
+              key={index}
+              title={service.title}
+              description={service.description}
+              price={service.price}
+              image={service.image}
+              index={index}
+            />
+          ))}
+        </div>
+        
+        <div className="mt-16 text-center animate-fade-in" data-aos="fade-up">
+          <h3 className="text-2xl font-semibold mb-4">Packs Promocionales</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+            <div className="card p-6 border-2 border-[#deb887]">
+              <h4 className="text-xl font-semibold mb-2">Pack Rejuvenecimiento</h4>
+              <p className="text-gray-500 text-sm mb-4">3 sesiones de Antiaging + 1 Hollywood Peel</p>
+              <p className="text-3xl font-bold text-[#deb887] mb-4">$220 USD</p>
+              <p className="text-green-600 font-medium mb-4">Ahorra $65 USD</p>
+              <a href="#appointment" className="btn-primary block text-center">Agendar Ahora</a>
+            </div>
+            
+            <div className="card p-6 border-2 border-[#deb887]">
+              <h4 className="text-xl font-semibold mb-2">Pack Luminosidad</h4>
+              <p className="text-gray-500 text-sm mb-4">3 sesiones Antimanchas + 2 Hidrataciones</p>
+              <p className="text-3xl font-bold text-[#deb887] mb-4">$260 USD</p>
+              <p className="text-green-600 font-medium mb-4">Ahorra $50 USD</p>
+              <a href="#appointment" className="btn-primary block text-center">Agendar Ahora</a>
+            </div>
+            
+            <div className="card p-6 border-2 border-[#deb887]">
+              <h4 className="text-xl font-semibold mb-2">Pack Completo</h4>
+              <p className="text-gray-500 text-sm mb-4">Diagnóstico + Limpieza + 2 sesiones personalizadas</p>
+              <p className="text-3xl font-bold text-[#deb887] mb-4">$180 USD</p>
+              <p className="text-green-600 font-medium mb-4">Ahorra $40 USD</p>
+              <a href="#appointment" className="btn-primary block text-center">Agendar Ahora</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Services;
