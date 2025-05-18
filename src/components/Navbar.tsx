@@ -57,9 +57,22 @@ const Navbar = ({ activeSection }: NavbarProps) => {
       }`}
     >
       <div className="container-custom flex justify-between items-center">
-        <a href="#home" className="text-xl md:text-2xl font-bold">
+      /*  <a href="#home" className="text-xl md:text-2xl font-bold">
           <span className="text-[#deb887]">BIO SKIN</span> <span className={isScrolled ? 'text-gray-800' : 'text-white'}>SALUD Y ESTÉTICA</span>
-        </a>
+        </a> */
+
+	<a href="#home" className="flex items-center space-x-2">
+  <img 
+    src="/images/logo/logo.png" 
+    alt="Logo Bio Skin" 
+    className="h-10 w-auto"
+  />
+  <span className="text-xl md:text-2xl font-bold">
+    <span className="text-[#deb887]">BIO SKIN</span>{' '}
+    <span className={isScrolled ? 'text-gray-800' : 'text-white'}>SALUD Y ESTÉTICA</span>
+  </span>
+</a>
+
 
         <nav className="hidden lg:block">
           <ul className="flex space-x-6">
