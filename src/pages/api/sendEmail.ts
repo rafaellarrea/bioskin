@@ -6,9 +6,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ message: 'Método no permitido' });
   }
 
-  const { name, email, phone, date, time, service, message } = req.body;
+  const { name, email, phone, service, date, time, message } = req.body;
 
-  if (!name || !email || !phone || !date || !time || !service) {
+  if (!name || !email || !phone || !service || !date || !time) {
     return res.status(400).json({ message: 'Faltan campos obligatorios' });
   }
 
@@ -17,30 +17,29 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       service: 'gmail',
       auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
+        pass: process.env.EMAIL_PASS
+      }
     });
 
-    const mailOptions = {
+    await transporter.sendMail({
       from: `"BioSkin Web" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
       subject: `Nueva solicitud: ${service}`,
       html: `
-        <h2>📋 Nueva Solicitud desde el sitio web</h2>
+        <h2>📋 Nueva Solicitud</h2>
         <p><strong>Nombre:</strong> ${name}</p>
-        <p><strong>Correo:</strong> ${email}</p>
+        <p><strong>Email:</strong> ${email}</p>
         <p><strong>Teléfono:</strong> ${phone}</p>
-        <p><strong>Fecha Preferida:</strong> ${date}</p>
-        <p><strong>Hora Preferida:</strong> ${time}</p>
         <p><strong>Servicio:</strong> ${service}</p>
-        <p><strong>Mensaje:</strong><br/>${message || 'Sin mensaje adicional'}</p>
-      `,
-    };
+        <p><strong>Fecha:</strong> ${date}</p>
+        <p><strong>Hora:</strong> ${time}</p>
+        <p><strong>Mensaje:</strong> ${message || 'Sin mensaje adicional'}</p>
+      `
+    });
 
-    await transporter.sendMail(mailOptions);
-    return res.status(200).json({ success: true });
+    res.status(200).json({ success: true });
   } catch (error) {
-    console.error('Error enviando correo:', error);
-    return res.status(500).json({ message: 'Error al enviar el correo' });
+    console.error('Error al enviar el correo:', error);
+    res.status(500).json({ message: 'Error al enviar el correo' });
   }
 }
