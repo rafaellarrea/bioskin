@@ -79,22 +79,21 @@ const Services = () => {
           ))}
         </div>
 
- // PROMOCION DEL MES       
-<div className="mt-16 text-center animate-fade-in" data-aos="fade-up">
-  <p className="uppercase text-[#deb887] font-semibold tracking-wide mb-2">
+ {/*PROMOCION DEL MES*/}       
+	<div className="mt-16 text-center animate-fade-in" data-aos="fade-up">
+  	<p className="uppercase text-[#deb887] font-semibold tracking-wide mb-2">
     Promoción del Mes
-  </p>
-  <div className="card mx-auto max-w-md p-6 border-2 border-[#deb887] mb-12">
-    <h4 className="text-xl font-semibold mb-2">Hollywood Peel + Hidratación Profunda</h4>
-    <p className="text-gray-500 text-sm mb-4">Unifica tono, revitaliza y nutre tu piel profundamente en una sola sesión.</p>
-    <p className="text-3xl font-bold text-[#deb887] mb-4">$50 USD</p>
-    <p className="text-green-600 font-medium mb-4">Precio especial solo por mayo</p>
+  	</p>
+ 	 <div className="card mx-auto max-w-md p-6 border-2 border-[#deb887] mb-12">
+    	<h4 className="text-xl font-semibold mb-2">Hollywood Peel + Hidratación Profunda</h4>
+   	 <p className="text-gray-500 text-sm mb-4">Unifica tono, revitaliza y nutre tu piel 	profundamente en una sola sesión.</p>
+    	<p className="text-3xl font-bold text-[#deb887] mb-4">$50 USD</p>
+   	 <p className="text-green-600 font-medium mb-4">Precio especial solo por mayo</p>
     <a href="#appointment" className="btn-primary block text-center">Agendar Promo</a>
   </div>
 </div>
 
-// PACKS PROMOS
-	
+{/*PACKS PROMOS*/}    
 	 <div className="mt-16 text-center animate-fade-in" data-aos="fade-up">
           <h3 className="text-2xl font-semibold mb-4">Packs Promocionales</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
