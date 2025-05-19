@@ -39,8 +39,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await transporter.sendMail(mailOptions);
     return res.status(200).json({ success: true });
 
-  } catch (error) {
+ /* } catch (error) {
     console.error('Error enviando correo:', error);
     return res.status(500).json({ message: 'Error al enviar el correo' });
-  }
+  }*/
+
+} catch (error: any) {
+  console.error('ERROR nodemailer:', error?.response || error);
+  return res.status(500).json({ message: 'Error al enviar el correo' });
+}
 }
