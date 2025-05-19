@@ -17,7 +17,7 @@ const Services = () => {
     },
     {
       title: "Tratamiento Antimanchas",
-      description: "Reduce hiperpigmentación con IPL y láser Nd:YAG, unificando el tono y luminosidad de la piel.",
+      description: "Unifica el tono de tu piel con un protocolo profesional que combina ácidos despigmentantes y aparatología avanzada. Resultados visibles desde la primera sesión.",
       price: 25,
       image: "/images/services/manchas/antimanchas.jpg"
     },
@@ -25,7 +25,7 @@ const Services = () => {
       title: "Remoción de Tatuajes",
       description: "Eliminación progresiva de tatuajes mediante láser Nd:YAG de última generación. Sesiones personalizadas.",
       price: 15,
-      image: "/images/services/hollywoodPeel/hollywod.jpg"
+      image: "/images/services/hollywoodPeel/hollywood.jpg"
     },
     {
       title: "Hidratación Profunda",
@@ -39,6 +39,20 @@ const Services = () => {
       price: 30,
       image: "/images/services/remocionTatuajes/remocionTatuajes.jpg"
     },
+{
+      title: "Bioestimuladores de colágeno",
+      description: "Activa la producción natural de colágeno para mejorar la firmeza, textura y elasticidad de la piel. Ideal para combatir la flacidez y lograr un efecto rejuvenecedor duradero.",
+      price: 150,
+      image: "/images/services/remocionTatuajes/remocionTatuajes.jpg"
+    },
+{
+      title: "Lipopapada enzimática",
+      description: "Moldea zonas localizadas sin cirugía mediante enzimas que disuelven grasa de forma segura y eficaz. Ideal para redefinir contorno corporal y facial.",
+      price: 30,
+      image: "/images/services/remocionTatuajes/remocionTatuajes.jpg"
+    },
+
+
 
   ];
 
