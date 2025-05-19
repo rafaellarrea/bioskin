@@ -40,16 +40,22 @@ const Services = () => {
       image: "/images/services/remocionTatuajes/remocionTatuajes.jpg"
     },
 {
-      title: "Bioestimuladores de colágeno",
-      description: "Activa la producción natural de colágeno para mejorar la firmeza, textura y elasticidad de la piel. Ideal para combatir la flacidez y lograr un efecto rejuvenecedor duradero.",
+      title: "Exosomas + Mesoterapia",
+      description: "Biotecnología de última generación para regenerar, reparar y revitalizar la piel desde el interior. Ideal para pieles desvitalizadas o con signos de envejecimiento.",
       price: 150,
-      image: "/images/services/remocionTatuajes/remocionTatuajes.jpg"
+      image: "/images/services/exosomas/exosomas.jpg"
+    },
+{
+      title: "NCTF + Mesoterapia",
+      description: "Rejuvenecimiento celular con complejo polirevitalizante: ácido hialurónico, vitaminas, minerales y antioxidantes para una piel firme, hidratada y luminosa.",
+      price: 150,
+      image: "/images/services/nctf/nctf.jpg"
     },
 {
       title: "Lipopapada enzimática",
       description: "Moldea zonas localizadas sin cirugía mediante enzimas que disuelven grasa de forma segura y eficaz. Ideal para redefinir contorno corporal y facial.",
       price: 30,
-      image: "/images/services/remocionTatuajes/remocionTatuajes.jpg"
+      image: "/images/services/lipopapada/lipopapada.jpg"
     },
 
 
