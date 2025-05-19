@@ -6,39 +6,46 @@ const Services = () => {
     {
       title: "Limpieza Facial Profunda",
       description: "Elimina impurezas, puntos negros y células muertas. Incluye extracción, hidratación y mascarilla personalizada.",
-      price: 45,
-      image: "/images/limpiezaProf/limpiezaProf2.jpg"
+      price: 25,
+      image: "/images/services/limpiezaProf/limpiezaProf2.jpg"
     },
     {
       title: "Tratamiento Antiaging",
       description: "Combate los signos del envejecimiento con radiofrecuencia y activos regeneradores para reafirmar la piel.",
-      price: 65,
-      image: "/images/antiaging/antiaging.jpeg"
+      price: 25,
+      image: "/images/services/antiaging/antiaging.jpeg"
     },
     {
       title: "Tratamiento Antimanchas",
       description: "Reduce hiperpigmentación con IPL y láser Nd:YAG, unificando el tono y luminosidad de la piel.",
-      price: 70,
-      image: "https://images.pexels.com/photos/3192384/pexels-photo-3192384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      price: 25/sesion,
+      image: "/images/services/manchas/antimanchas.jpg"
     },
     {
       title: "Remoción de Tatuajes",
       description: "Eliminación progresiva de tatuajes mediante láser Nd:YAG de última generación. Sesiones personalizadas.",
-      price: 80,
-      image: "https://images.pexels.com/photos/936094/pexels-photo-936094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      price: 15,
+      image: "/images/services/hollywoodPeel/hollywod.jpg"
     },
     {
       title: "Hidratación Profunda",
       description: "Restaura la barrera cutánea con ácido hialurónico, péptidos y vitaminas para una piel radiante e hidratada.",
-      price: 50,
-      image: "https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      price: 35,
+      image: "/images/services/hidratacionProfunda/hidraProf.jpg"
     },
     {
       title: "Hollywood Peel",
       description: "Peeling de carbón con láser para rejuvenecer, eliminar impurezas y dar luminosidad inmediata a la piel.",
-      price: 75,
-      image: "https://images.pexels.com/photos/3764013/pexels-photo-3764013.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      price: 30,
+      image: "/images/services/remocionTatuajes/remocionTatuajes.jpg"
     },
+ {
+      title: "Bioestimuladores de colágeno",
+      description: "Activa la producción natural de colágeno para mejorar la firmeza, textura y elasticidad de la piel. Ideal para combatir la flacidez y lograr un efecto rejuvenecedor duradero.",
+      price: 35,
+      image: "/images/services/remocionTatuajes/remocionTatuajes.jpg"
+    },
+
   ];
 
   return (
