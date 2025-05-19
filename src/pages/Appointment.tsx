@@ -197,7 +197,7 @@ const Appointment = () => {
                         <option value="hollywood_peel">Hollywood Peel</option>
 			<option value="Exosomas + Mesoterapia">Exosomas + Mesoterapia</option>
 			<option value="NCTF + Mesoterapia">NCTF + Mesoterapia</option>
-			<Lipopapada enzimática">Lipopapada enzimática</option>
+			<option value="Lipopapada enzimática">Lipopapada enzimática</option>
                         <option value="diagnostico">Diagnóstico Facial</option>
                         <option value="otro">Otro</option>
                       </select>
