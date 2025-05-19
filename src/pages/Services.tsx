@@ -81,8 +81,8 @@ const Services = () => {
 
  {/*PROMOCION DEL MES*/}       
 	<div className="mt-16 text-center animate-fade-in" data-aos="fade-up">
-  	<p className="uppercase text-2xl font-semibold mb-4">
-    Promoción del Mes
+  	{/*<p className="uppercase text-2xl font-semibold mb-4"> Promoción del Mes*/}
+	<h3 className="text-2xl font-semibold mb-4">Promoción del mes</h3>
   	</p>
  	 <div className="card mx-auto max-w-md p-6 border-2 border-[#deb887] mb-12">
     	<h4 className="text-xl font-semibold mb-2">Hollywood Peel + Hidratación Profunda</h4>
