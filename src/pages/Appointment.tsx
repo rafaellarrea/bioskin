@@ -59,7 +59,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     }
   } catch (err) {
     console.error(err);
-    setError('Ocurrió un error al enviar el formulario. Por favor, intente nuevamente.');
+    setError('Ocurrió un error al enviar el  formulario. Por favor, intente nuevamente.');
   } finally {
     setSubmitting(false);
   }
