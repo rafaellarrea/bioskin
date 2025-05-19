@@ -13,7 +13,7 @@ const Services = () => {
       title: "Tratamiento Antiaging",
       description: "Combate los signos del envejecimiento con radiofrecuencia y activos regeneradores para reafirmar la piel.",
       price: 65,
-      image: "https://images.pexels.com/photos/3997993/pexels-photo-3997993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      image: "/images/antiaging/antiaging.jpeg"
     },
     {
       title: "Tratamiento Antimanchas",
