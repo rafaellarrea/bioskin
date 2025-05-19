@@ -39,12 +39,6 @@ const Services = () => {
       price: 30,
       image: "/images/services/remocionTatuajes/remocionTatuajes.jpg"
     },
- {
-      title: "Bioestimuladores de colágeno",
-      description: "Activa la producción natural de colágeno para mejorar la firmeza, textura y elasticidad de la piel. Ideal para combatir la flacidez y lograr un efecto rejuvenecedor duradero.",
-      price: 35,
-      image: "/images/services/remocionTatuajes/remocionTatuajes.jpg"
-    },
 
   ];
 
