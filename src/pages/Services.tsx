@@ -18,7 +18,7 @@ const Services = () => {
     {
       title: "Tratamiento Antimanchas",
       description: "Reduce hiperpigmentación con IPL y láser Nd:YAG, unificando el tono y luminosidad de la piel.",
-      price: 25/sesion,
+      price: 25,
       image: "/images/services/manchas/antimanchas.jpg"
     },
     {
