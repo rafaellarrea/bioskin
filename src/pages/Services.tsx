@@ -53,7 +53,7 @@ const Services = () => {
     },
 {
       title: "Lipopapada enzimática",
-      description: "Moldea zonas localizadas sin cirugía mediante enzimas que disuelven grasa de forma segura y eficaz. Ideal para redefinir contorno corporal y facial.",
+      description: "Moldea zonas localizadas sin cirugía mediante enzimas que disuelven grasa de forma segura y eficaz. Ideal para redefinir contorno facial.",
       price: 30,
       image: "/images/services/lipopapada/lipopapada.jpg"
     },
