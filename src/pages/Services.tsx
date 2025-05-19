@@ -7,7 +7,7 @@ const Services = () => {
       title: "Limpieza Facial Profunda",
       description: "Elimina impurezas, puntos negros y células muertas. Incluye extracción, hidratación y mascarilla personalizada.",
       price: 45,
-      image: "/images/limpiezaProf/limpiezaProf.jpg"
+      image: "/images/limpiezaProf/limpiezaProf2.jpg"
     },
     {
       title: "Tratamiento Antiaging",
