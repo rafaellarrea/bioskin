@@ -45,7 +45,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   setError('');
 
   try {
-    const res = await fetch('/api/sendEmail', {
+    const res = await fetch('/api/sendMail', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
