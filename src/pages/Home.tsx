@@ -24,7 +24,7 @@ const Home = () => {
       {/* Hero background */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/logo/logo.png"
+          src="/images/logo/logo1.png"
           alt="BIOSKIN BY DRA DANIELA CREAMER"
           className="w-full h-full object-cover"
         />
