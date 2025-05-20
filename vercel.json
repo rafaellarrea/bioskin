@@ -1,7 +1,6 @@
 {
+{
   "functions": {
-    "api/sendEmail.ts": {
-      "runtime": "nodejs18.x"
-    }
+    "api/sendEmail.ts": {}
   }
 }
