@@ -6,9 +6,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     return res.status(405).json({ message: 'Método no permitido' });
   }
 
-  const { name, email, phone, date, service, message } = req.body;
+  const { name, email, phone, date, service, time, message } = req.body;
 
-  if (!name || !email || !phone || !date || !service) {
+  if (!name || !email || !phone || !date || !service || !time) {
     return res.status(400).json({ message: 'Faltan campos obligatorios' });
   }
 
@@ -26,11 +26,12 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       to: process.env.EMAIL_USER,
       subject: `Nueva solicitud: ${service}`,
       html: `
-        <h2>📋 Nueva Solicitud desde el sitio web</h2>
+        <h2>Nueva Solicitud</h2>
         <p><strong>Nombre:</strong> ${name}</p>
-        <p><strong>Correo:</strong> ${email}</p>
+        <p><strong>Email:</strong> ${email}</p>
         <p><strong>Teléfono:</strong> ${phone}</p>
-        <p><strong>Fecha Preferida:</strong> ${date}</p>
+        <p><strong>Fecha:</strong> ${date}</p>
+        <p><strong>Hora:</strong> ${time}</p>
         <p><strong>Servicio:</strong> ${service}</p>
         <p><strong>Mensaje:</strong><br/>${message || 'Sin mensaje adicional'}</p>
       `
