@@ -39,7 +39,7 @@ const Appointment = () => {
     }, 1500);
   };*/
 
-const handleSubmit = async (e: React.FormEvent) => {
+/*const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
   setSubmitting(true);
   setError('');
@@ -60,6 +60,51 @@ const handleSubmit = async (e: React.FormEvent) => {
   } catch (err) {
     console.error(err);
     setError('Ocurrió un error al enviar el  formulario. Por favor, intente nuevamente.');
+  } finally {
+    setSubmitting(false);
+  }
+};*/
+
+	const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setSubmitting(true);
+  setError('');
+
+  try {
+    const res = await fetch('/api/sendEmail', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        message: `
+          Teléfono: ${formData.phone}
+          Servicio: ${formData.service}
+          Fecha: ${formData.date}
+          Hora: ${formData.time}
+          Comentario adicional: ${formData.message}
+        `
+      }),
+    });
+
+    if (res.ok) {
+      setSubmitted(true);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        date: '',
+        time: '',
+        message: '',
+      });
+    } else {
+      const data = await res.json();
+      setError(data.message || 'Error al enviar el formulario.');
+    }
+  } catch (err) {
+    console.error(err);
+    setError('Ocurrió un error al enviar el formulario. Por favor, intente nuevamente.');
   } finally {
     setSubmitting(false);
   }
