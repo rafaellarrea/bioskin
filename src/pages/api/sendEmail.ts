@@ -1,14 +1,14 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Método no permitido' });
   }
 
-  const { name, email, phone, service, date, time, message } = req.body;
+  const { name, email, phone, date, service, message } = req.body;
 
-  if (!name || !email || !phone || !service || !date || !time) {
+  if (!name || !email || !phone || !date || !service) {
     return res.status(400).json({ message: 'Faltan campos obligatorios' });
   }
 
@@ -26,14 +26,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       to: process.env.EMAIL_USER,
       subject: `Nueva solicitud: ${service}`,
       html: `
-        <h2>📋 Nueva Solicitud</h2>
+        <h2>📋 Nueva Solicitud desde el sitio web</h2>
         <p><strong>Nombre:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Correo:</strong> ${email}</p>
         <p><strong>Teléfono:</strong> ${phone}</p>
+        <p><strong>Fecha Preferida:</strong> ${date}</p>
         <p><strong>Servicio:</strong> ${service}</p>
-        <p><strong>Fecha:</strong> ${date}</p>
-        <p><strong>Hora:</strong> ${time}</p>
-        <p><strong>Mensaje:</strong> ${message || 'Sin mensaje adicional'}</p>
+        <p><strong>Mensaje:</strong><br/>${message || 'Sin mensaje adicional'}</p>
       `
     });
 
@@ -42,4 +41,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     console.error('Error al enviar el correo:', error);
     res.status(500).json({ message: 'Error al enviar el correo' });
   }
-}
+};
+
+export default handler;
